@@ -7,14 +7,8 @@ tags:
     - 'rad'
 ---
 
-# Hello World
+# Create a new branch
 
-This is a markdown test file
-
-```javascript
-console.log(foo);
 ```
-
-## Usages
-
-Lorem Ipsum `42`
+git checkout -b
+```
