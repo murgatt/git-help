@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
 import styled from '@emotion/styled';
 import 'github-markdown-css';
-import data from './data/index';
+import data from '../data/index';
 
 const MarkdownContent = styled.article`
     width: 800px;
