@@ -18,3 +18,15 @@ console.log(foo);
 ## Usages
 
 Lorem Ipsum `42`
+
+Lorem
+
+bla bla
+
+# Foo
+
+foo
+
+# Bar
+
+bar

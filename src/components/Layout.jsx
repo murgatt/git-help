@@ -4,7 +4,7 @@ import styled from '@emotion/styled';
 import Search from './Search';
 
 const LayoutStyled = styled.div`
-    padding: 0 32px;
+    padding: 0 24px;
 `;
 
 const Layout = () => (
