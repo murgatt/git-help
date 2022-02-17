@@ -11,7 +11,7 @@ const SearchIcon = ({ className, size }) => (
             strokeWidth="32"
         />
         <path
-            fill="none"
+            fill="red"
             stroke="currentColor"
             strokeLinecap="round"
             strokeMiterlimit="10"

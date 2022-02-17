@@ -8,13 +8,12 @@ const ResultList = styled.ul`
     top: 80px;
     width: 600px;
     max-width: 100%;
-    margin-top: 16px;
+    margin-top: 24px;
     padding: 16px;
     border-radius: 12px;
-    background-color: white;
-    box-shadow: 0 6px 30px -10px #d5dbed;
+    background-color: var(--background-surface);
+    box-shadow: 5px 8px 10px var(--shadow-bottom), -5px -8px 10px var(--shadow-top);
     list-style: none;
-    transition: height 1s ease-in-out;
 `;
 
 const SearchResultList = ({ activeResultIndex, onResultHover, searchResults = [] }) => {

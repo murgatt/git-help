@@ -8,7 +8,8 @@ import data from '../data/index';
 const MarkdownContent = styled.article`
     width: 800px;
     max-width: 100%;
-    margin: 32px auto;
+    margin: 64px auto;
+    background-color: var(--background-main);
 `;
 
 function Content() {

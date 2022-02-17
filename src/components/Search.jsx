@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useMatch } from 'react-router-dom';
 import styled from '@emotion/styled';
 import Fuse from 'fuse.js';
 import data from '../data/index';
@@ -20,8 +20,8 @@ const SearchForm = styled.form`
     height: 80px;
     padding: 16px;
     border-radius: 12px;
-    box-shadow: 0 6px 30px -10px #d5dbed;
-    //background: var(--surface-background);
+    background-color: var(--background-surface);
+    box-shadow: 5px 8px 10px var(--shadow-bottom), -5px -8px 10px var(--shadow-top);
 `;
 
 const SearchField = styled.div`
@@ -35,11 +35,17 @@ const SearchInput = styled.input`
     height: 100%;
     border: none;
     border-radius: 8px;
-    background: #f1f2f5;
     padding-left: 40px;
+    background-color: var(--background-surface);
+    color: var(--color-text);
 
     &::placeholder {
         transition: opacity 250ms ease-in-out;
+    }
+
+    &:focus {
+        box-shadow: inset 2px 2px 4px var(--shadow-bottom), inset -2px -2px 4px var(--shadow-top);
+        outline: none;
     }
 
     &:focus::placeholder {
@@ -56,6 +62,7 @@ const Icon = styled(SearchIcon)`
     left: 8px;
     top: 50%;
     transform: translateY(-50%);
+    color: var(--color-text);
 `;
 
 const fuse = new Fuse(data, {
@@ -64,6 +71,7 @@ const fuse = new Fuse(data, {
 });
 
 function Search() {
+    const isRootPage = !!useMatch('/');
     const navigate = useNavigate();
     const [searchResults, setSearchResults] = useState([]);
     const [activeResultIndex, setActiveResultIndex] = useState(0);
@@ -112,6 +120,7 @@ function Search() {
                         placeholder="Search"
                         onChange={handleChange}
                         onKeyDown={handleKeyDown}
+                        autoFocus={isRootPage}
                         onFocus={() => setIsFocused(true)}
                         onBlur={() => setIsFocused(false)}
                     />
