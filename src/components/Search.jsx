@@ -117,7 +117,7 @@ function Search() {
                     <Icon />
                     <SearchInput
                         type="search"
-                        placeholder="Search"
+                        placeholder="Search a Git command"
                         onChange={handleChange}
                         onKeyDown={handleKeyDown}
                         autoFocus={isRootPage}

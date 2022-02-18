@@ -6,7 +6,7 @@ import Content from './Content';
 
 const AppRoot = styled.main`
     min-height: 100vh;
-    padding-top: 32px;
+    padding-top: 64px;
     background-color: var(--background-main);
 `;
 

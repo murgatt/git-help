@@ -8,7 +8,7 @@ const ResultList = styled.ul`
     top: 80px;
     width: 600px;
     max-width: 100%;
-    margin-top: 24px;
+    margin-top: 32px;
     padding: 16px;
     border-radius: 12px;
     background-color: var(--background-surface);
