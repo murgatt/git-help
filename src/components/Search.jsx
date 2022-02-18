@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate, useMatch } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import styled from '@emotion/styled';
 import Fuse from 'fuse.js';
 import data from '../data/index';
@@ -71,7 +71,6 @@ const fuse = new Fuse(data, {
 });
 
 function Search() {
-    const isRootPage = !!useMatch('/');
     const navigate = useNavigate();
     const [searchResults, setSearchResults] = useState([]);
     const [activeResultIndex, setActiveResultIndex] = useState(0);
@@ -120,7 +119,6 @@ function Search() {
                         placeholder="Search a Git command"
                         onChange={handleChange}
                         onKeyDown={handleKeyDown}
-                        autoFocus={isRootPage}
                         onFocus={() => setIsFocused(true)}
                         onBlur={() => setIsFocused(false)}
                     />
