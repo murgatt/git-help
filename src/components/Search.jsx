@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styled from '@emotion/styled';
 import Fuse from 'fuse.js';
@@ -72,13 +72,16 @@ const fuse = new Fuse(data, {
 
 function Search() {
     const navigate = useNavigate();
+    const [searchValue, setSearchValue] = useState('');
     const [searchResults, setSearchResults] = useState([]);
     const [activeResultIndex, setActiveResultIndex] = useState(0);
     const [isFocused, setIsFocused] = useState(false);
+    const searchInputRef = useRef(null);
 
     const handleChange = event => {
         const search = event.target.value;
         const results = fuse.search(search);
+        setSearchValue(search);
         setSearchResults(results);
         setActiveResultIndex(0);
     };
@@ -104,6 +107,9 @@ function Search() {
     const handleSubmit = event => {
         event.preventDefault();
         if (searchResults.length) {
+            setSearchValue('');
+            searchInputRef.current.blur();
+            setSearchResults([]);
             const route = searchResults[activeResultIndex].item.id;
             navigate(route);
         }
@@ -121,6 +127,8 @@ function Search() {
                         onKeyDown={handleKeyDown}
                         onFocus={() => setIsFocused(true)}
                         onBlur={() => setIsFocused(false)}
+                        value={searchValue}
+                        ref={searchInputRef}
                     />
                 </SearchField>
             </SearchForm>
