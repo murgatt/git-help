@@ -36,7 +36,7 @@ const SearchInput = styled.input`
     height: 100%;
     border: none;
     border-radius: 8px;
-    padding-left: 40px;
+    padding-left: 48px;
     background-color: var(--background-surface);
     color: var(--color-text);
 
@@ -60,7 +60,7 @@ const SearchInput = styled.input`
 
 const Icon = styled(SearchIcon)`
     position: absolute;
-    left: 8px;
+    left: 12px;
     top: 50%;
     transform: translateY(-50%);
     color: var(--color-text);
@@ -82,7 +82,7 @@ function Search() {
 
     const handleChange = event => {
         const search = event.target.value;
-        const results = fuse.search(search);
+        const results = fuse.search(search).slice();
         setSearchValue(search);
         setSearchResults(results);
         setActiveResultIndex(0);
