@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { CSSTransition } from 'react-transition-group';
 import styled from '@emotion/styled';
 import Fuse from 'fuse.js';
 import data from '../data/index';
@@ -77,6 +78,7 @@ function Search() {
     const [activeResultIndex, setActiveResultIndex] = useState(0);
     const [isFocused, setIsFocused] = useState(false);
     const searchInputRef = useRef(null);
+    const shouldShowResults = isFocused && searchResults.length > 0;
 
     const handleChange = event => {
         const search = event.target.value;
@@ -104,14 +106,19 @@ function Search() {
 
     const handleResultHover = resultIndex => setActiveResultIndex(resultIndex);
 
+    const onPageChange = () => {
+        setSearchValue('');
+        searchInputRef.current.blur();
+        setSearchResults([]);
+        setActiveResultIndex(0);
+        const route = searchResults[activeResultIndex].item.id;
+        navigate(route);
+    };
+
     const handleSubmit = event => {
         event.preventDefault();
         if (searchResults.length) {
-            setSearchValue('');
-            searchInputRef.current.blur();
-            setSearchResults([]);
-            const route = searchResults[activeResultIndex].item.id;
-            navigate(route);
+            onPageChange();
         }
     };
 
@@ -132,13 +139,14 @@ function Search() {
                     />
                 </SearchField>
             </SearchForm>
-            {isFocused && (
+            <CSSTransition in={shouldShowResults} timeout={300} classNames="fade" unmountOnExit>
                 <SearchResultList
                     activeResultIndex={activeResultIndex}
+                    onResultClick={onPageChange}
                     onResultHover={handleResultHover}
                     searchResults={searchResults}
                 />
-            )}
+            </CSSTransition>
         </SearchSection>
     );
 }

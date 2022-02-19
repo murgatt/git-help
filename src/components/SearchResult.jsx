@@ -5,7 +5,7 @@ import styled from '@emotion/styled';
 
 const ResultLink = styled(Link)`
     text-decoration: none;
-    padding: 12px;
+    padding: 16px;
     border-radius: 8px;
     display: block;
     opacity: 0.7;
@@ -18,9 +18,9 @@ const ResultLink = styled(Link)`
     }
 `;
 
-const SearchResult = ({ description, isActive, id, onHover, title }) => (
+const SearchResult = ({ description, isActive, id, onClick, onHover, title }) => (
     <li onMouseEnter={onHover}>
-        <ResultLink to={id} isActive={isActive} tabIndex="-1" className={isActive ? 'active' : ''}>
+        <ResultLink to={id} isActive={isActive} onClick={onClick} tabIndex="-1" className={isActive ? 'active' : ''}>
             {title} - {description}
         </ResultLink>
     </li>
@@ -30,6 +30,7 @@ SearchResult.propTypes = {
     description: PropTypes.string,
     isActive: PropTypes.bool,
     id: PropTypes.string.isRequired,
+    onClick: PropTypes.func,
     onHover: PropTypes.func.isRequired,
     title: PropTypes.string.isRequired,
 };
