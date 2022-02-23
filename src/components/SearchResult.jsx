@@ -10,11 +10,12 @@ const ResultLink = styled(Link)`
     display: block;
     opacity: 0.7;
     color: var(--color-text);
-    transition: opacity 250ms ease-in-out, box-shadow 250ms ease-in-out;
+    background-color: transparent;
+    transition: opacity 250ms ease-in-out, background-color 250ms ease-in-out;
 
     &.active {
         opacity: 1;
-        box-shadow: inset 2px 2px 4px var(--shadow-bottom), inset -2px -2px 4px var(--shadow-top);
+        background-color: var(--background-focus);
     }
 `;
 
