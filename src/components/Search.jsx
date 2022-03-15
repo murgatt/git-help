@@ -67,7 +67,7 @@ const Icon = styled(SearchIcon)`
 `;
 
 const fuse = new Fuse(data, {
-    keys: ['title', 'description', 'tags'],
+    keys: ['title', 'tags'],
     includeMatches: true,
 });
 

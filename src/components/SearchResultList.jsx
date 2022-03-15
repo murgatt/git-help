@@ -40,7 +40,6 @@ const SearchResultList = ({ activeResultIndex, onResultClick, onResultHover, sea
     <ResultList>
         {searchResults.map((result, index) => (
             <SearchResult
-                description={result.item.description}
                 id={result.item.id}
                 isActive={activeResultIndex === index}
                 key={result.item.id}
