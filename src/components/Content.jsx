@@ -6,21 +6,21 @@ import 'github-markdown-css';
 import data from '../data/index';
 
 const MarkdownContent = styled.article`
-    width: 800px;
-    max-width: 100%;
-    margin: 64px auto;
-    background-color: var(--background-main);
+  width: 800px;
+  max-width: 100%;
+  margin: 64px auto;
+  background-color: var(--background-main);
 `;
 
 function Content() {
-    const { contentId } = useParams();
-    const content = data.find(item => item.id === contentId);
+  const { contentId } = useParams();
+  const content = data.find(item => item.id === contentId);
 
-    return (
-        <MarkdownContent className="markdown-body">
-            <ReactMarkdown>{content.markdown}</ReactMarkdown>
-        </MarkdownContent>
-    );
+  return (
+    <MarkdownContent className="markdown-body">
+      <ReactMarkdown>{content.markdown}</ReactMarkdown>
+    </MarkdownContent>
+  );
 }
 
 export default Content;

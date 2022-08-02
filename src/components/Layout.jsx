@@ -5,15 +5,15 @@ import Search from './Search';
 import Header from './Header';
 
 const LayoutStyled = styled.div`
-    padding: 0 24px;
+  padding: 0 24px;
 `;
 
 const Layout = () => (
-    <LayoutStyled>
-        <Header />
-        <Search />
-        <Outlet />
-    </LayoutStyled>
+  <LayoutStyled>
+    <Header />
+    <Search />
+    <Outlet />
+  </LayoutStyled>
 );
 
 export default Layout;

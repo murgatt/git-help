@@ -2,10 +2,10 @@
 id: revert-file-or-directory
 title: Revert a single file or a directory
 tags:
-    - 'revert'
-    - 'rollback'
-    - 'discard'
-    - 'checkout --'
+  - 'revert'
+  - 'rollback'
+  - 'discard'
+  - 'checkout --'
 ---
 
 # Revert a single file or a directory

@@ -6,10 +6,10 @@ import revertFileOrDirectory from './revert-file-or-directory';
 import switchBranch from './switch-branch';
 
 export default [
-    changeCommitMessage,
-    changeRemoteTrackingBranch,
-    createNewBranch,
-    deleteBranch,
-    revertFileOrDirectory,
-    switchBranch,
+  changeCommitMessage,
+  changeRemoteTrackingBranch,
+  createNewBranch,
+  deleteBranch,
+  revertFileOrDirectory,
+  switchBranch,
 ];
