@@ -1,6 +1,6 @@
 ---
-id: switch-branch
 title: Switch branch
+id: switch-branch
 tags:
   - 'switch'
   - 'change'

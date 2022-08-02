@@ -1,6 +1,6 @@
 ---
-id: revert-file-or-directory
 title: Revert a single file or a directory
+id: revert-file-or-directory
 tags:
   - 'revert'
   - 'rollback'
