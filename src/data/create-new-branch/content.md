@@ -1,6 +1,6 @@
 ---
-id: create-new-branch
 title: Create a new branch
+id: create-new-branch
 tags:
   - 'create'
   - 'branch'

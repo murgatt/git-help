@@ -1,6 +1,6 @@
 ---
-id: change-remote-tracking-branch
 title: Change the remote a branch is tracking
+id: change-remote-tracking-branch
 tags:
   - 'change'
   - 'tracking'

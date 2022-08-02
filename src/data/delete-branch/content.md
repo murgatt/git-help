@@ -1,6 +1,6 @@
 ---
-id: delete-branch
 title: Delete branch
+id: delete-branch
 tags:
   - 'delete'
   - 'branch'
