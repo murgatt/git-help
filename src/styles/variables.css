@@ -1,20 +1,20 @@
 html {
-    --background-main: #f2f2f2;
-    --background-surface: #f2f2f2;
-    --background-focus: #ffffff;
-    --color-text: #24292f;
-    --shadow-top: #ffffff;
-    --shadow-bottom: #cecece;
+  --background-main: #f2f2f2;
+  --background-surface: #f2f2f2;
+  --background-focus: #ffffff;
+  --color-text: #24292f;
+  --shadow-top: #ffffff;
+  --shadow-bottom: #cecece;
 }
 
 @media (prefers-color-scheme: dark) {
-    html {
-        --background-main: #313a40;
-        --background-surface: #313a40;
-        --background-focus: #161b22;
-        --color-headings: #f2f2f2;
-        --color-text: #c9d1d9;
-        --shadow-top: #38434a;
-        --shadow-bottom: #2a3136;
-    }
+  html {
+    --background-main: #313a40;
+    --background-surface: #313a40;
+    --background-focus: #161b22;
+    --color-headings: #f2f2f2;
+    --color-text: #c9d1d9;
+    --shadow-top: #38434a;
+    --shadow-bottom: #2a3136;
+  }
 }

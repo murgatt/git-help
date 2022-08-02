@@ -2,11 +2,11 @@
 id: change-remote-tracking-branch
 title: Change the remote tracking branch
 tags:
-    - 'change'
-    - 'branch'
-    - 'tracking'
-    - 'remote'
-    - 'upstream'
+  - 'change'
+  - 'branch'
+  - 'tracking'
+  - 'remote'
+  - 'upstream'
 ---
 
 # Change the remote tracking branch

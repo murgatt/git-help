@@ -2,11 +2,11 @@
 id: create-new-branch
 title: Create a new branch
 tags:
-    - 'create'
-    - 'branch'
-    - 'new'
-    - 'checkout'
-    - 'checkout -b'
+  - 'create'
+  - 'branch'
+  - 'new'
+  - 'checkout'
+  - 'checkout -b'
 ---
 
 # Create a new branch

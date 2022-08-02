@@ -7,5 +7,5 @@ const mdPluginOptions = { mode: [Mode.HTML], markdown: body => body };
 
 // https://vitejs.dev/config/
 export default defineConfig({
-    plugins: [react(), mdPlugin(mdPluginOptions)],
+  plugins: [react(), mdPlugin(mdPluginOptions)],
 });

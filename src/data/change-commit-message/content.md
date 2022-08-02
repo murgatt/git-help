@@ -2,12 +2,12 @@
 title: Change commit message
 id: change-commit-message
 tags:
-    - 'change'
-    - 'edit'
-    - 'amend'
-    - 'modify'
-    - 'commit'
-    - 'message'
+  - 'change'
+  - 'edit'
+  - 'amend'
+  - 'modify'
+  - 'commit'
+  - 'message'
 ---
 
 # Change commit message

@@ -5,21 +5,21 @@ import Layout from './Layout';
 import Content from './Content';
 
 const AppRoot = styled.main`
-    min-height: 100vh;
-    padding-top: 64px;
-    background-color: var(--background-main);
+  min-height: 100vh;
+  padding-top: 64px;
+  background-color: var(--background-main);
 `;
 
 function App() {
-    return (
-        <AppRoot>
-            <Routes>
-                <Route path="/" element={<Layout />}>
-                    <Route path=":contentId" element={<Content />} />
-                </Route>
-            </Routes>
-        </AppRoot>
-    );
+  return (
+    <AppRoot>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route path=":contentId" element={<Content />} />
+        </Route>
+      </Routes>
+    </AppRoot>
+  );
 }
 
 export default App;

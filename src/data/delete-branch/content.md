@@ -2,8 +2,8 @@
 id: delete-branch
 title: Delete branch
 tags:
-    - 'delete'
-    - 'branch'
+  - 'delete'
+  - 'branch'
 ---
 
 # Delete branch
